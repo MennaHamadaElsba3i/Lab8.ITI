@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+
+<div id="output"></div>
+
+<script>
+  var data = ["Ahmed", "Menna", "Mona", "Ali", "Mohamed", "Omar"];
+
+  var container = document.getElementById("output");
+
+  for (var i = 0; i < data.length; i++) {
+    var item = document.createElement("p");
+
+    if (i % 2 === 0) {
+      item.style.color = "blue";
+      item.style.fontWeight = "bold";
+
+    } else { 
+      item.style.color = "red";
+      item.style.fontStyle = "italic";
+    }
+
+    item.innerHTML = "Index " + i + ": " + data[i];
+    container.appendChild(item);
+  }
+</script>
+
+</body>
+</html>
